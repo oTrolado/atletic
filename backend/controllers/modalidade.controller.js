@@ -2,6 +2,17 @@ const Modalidade = require('../models/modalidade.model');
 
 const controller = {};
 
+controller.listarTodos = (req, res) => {
+    Modalidade.listAll((erro, resp) => {
+        if(erro){
+            console.error(erro);
+            throw erro;
+        } else {
+            res.json(resp).end();
+        }
+    });
+}
+
 controller.listar = (req, res) => {
     Modalidade.list(req.params.cod, (erro, resp) => {
         if(erro){

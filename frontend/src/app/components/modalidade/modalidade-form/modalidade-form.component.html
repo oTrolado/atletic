@@ -1,0 +1,26 @@
+<section class="container">
+    <h1>Formulário Modalidade</h1>
+  
+    <form>
+        <div class="form-container">
+          <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput  [(ngModel)]="modalidade.mod_nome" name="mod_nome" required>
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Descrição</mat-label>
+            <textarea matInput [(ngModel)]="modalidade.mod_descricao" name="mod_descricao" required></textarea>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <input matInput  [(ngModel)]="modalidade.mod_categoria" name="mod_categoria" required>
+          </mat-form-field>
+
+          <button mat-button color="accent" (click)="cancelar()"><strong>Cancelar</strong></button>
+          <button mat-button color="primary" (click)="enviar()"><strong>Enviar</strong></button>
+        </div>
+    </form>
+    
+  </section>

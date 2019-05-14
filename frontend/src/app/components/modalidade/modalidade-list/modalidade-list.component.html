@@ -1,0 +1,22 @@
+<section class="container">
+  <h1>Modalidades</h1>
+
+  <table>
+    <tr>
+      <td>
+          <a routerLink="/modalidade/novo" mat-button>Novo</a>
+      </td>
+    </tr>
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Categoria</th>
+    </tr>
+    <tr *ngFor="let modalidade of modalidades">
+      <td><a [routerLink]="['/modalidade',modalidade.mod_codigo]">{{ modalidade.mod_nome }}</a></td>
+      <td>{{ modalidade.mod_descricao}}</td>
+      <td>{{ modalidade.mod_descricao}}</td>
+    </tr>
+  </table>
+
+</section>

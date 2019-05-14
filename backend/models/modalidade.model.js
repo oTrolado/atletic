@@ -2,6 +2,10 @@ const client = require('../config/conexao');
 
 const model = {};
 
+model.listAll = (callback) => {
+    client.query('SELECT * FROM Modalidade', callback);
+}
+
 model.list = (cod, callback) => {
     client.query('SELECT * FROM Modalidade WHERE mod_codigo = '+ cod, callback);
 }
