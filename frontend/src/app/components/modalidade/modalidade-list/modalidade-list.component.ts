@@ -27,4 +27,17 @@ export class ModalidadeListComponent implements OnInit {
     ); 
   }
 
+  excluir(codigo){
+    this.modalidadeS.deletar(codigo).subscribe(
+      sucess => this.ngOnInit(),
+      erro => {
+        if(erro.status == 200){
+          this.ngOnInit();
+        } else {
+          console.error(erro);
+        }
+      }
+    );
+  }
+
 }

@@ -16,6 +16,9 @@
       <td><a [routerLink]="['/modalidade',modalidade.mod_codigo]">{{ modalidade.mod_nome }}</a></td>
       <td>{{ modalidade.mod_descricao}}</td>
       <td>{{ modalidade.mod_descricao}}</td>
+      <td><button mat-flat-button color="warn" (click)="excluir(modalidade.mod_codigo)">
+        <mat-icon>delete_forever</mat-icon>
+      </button></td>
     </tr>
   </table>
 

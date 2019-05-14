@@ -37,20 +37,48 @@ export class ModalidadeFormComponent implements OnInit {
   }
 
   cancelar(){
-    this.router.navigate['modalidade'];
+    this.router.navigate(['modalidade']);
   }
 
   enviar(){
     let check:boolean = true;
     Object.keys(this.modalidade).map(key => {
-      if(this.modalidade[key].length < 1) alert('Preencha todos os campos');
-      console.error(this.modalidade[key])
-      check = false;
-    });
+      if(this.modalidade[key].length < 1){
+        alert('Preencha todos os campos');
+        check = false;
+      }  
+    }); 
 
     if(check){
-      console.log(this.modalidade.mod_codigo);
+      if(this.modalidade.mod_codigo){
+        this.service.atualizar(this.modalidade).subscribe(
+          susses => this.sucesso('Atualizado'),
+          error => {
+            if(error.status == 200){
+              this.sucesso('Atualizado');
+            } else {
+              console.error(error);
+            }
+          }
+        );
+      } else {
+        this.service.criar(this.modalidade).subscribe(
+          susses => this.sucesso('Criado'),
+          error => {
+            if(error.status == 201){
+              this.sucesso('Criado');
+            } else {
+              console.error(error);
+            }
+          }
+        ); 
+      }
     }
+  }
+
+  sucesso(mensagem){
+    console.log(mensagem);
+    this.cancelar();
   }
 
 }
