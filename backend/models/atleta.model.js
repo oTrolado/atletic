@@ -3,11 +3,11 @@ const client = require('../config/conexao');
 const model = {};
 
 model.listAll = (callback) => {
-    client.query('SELECT * FROM Atleta', callback);
+    client.query('SELECT * FROM Atleta A INNER JOIN Modalidade M ON A.atl_mod = M.mod_codigo ORDER BY A.atl_nome', callback);
 }
 
 model.list = (cod, callback) => {
-    client.query('SELECT * FROM Atleta WHERE atl_codigo = '+ cod, callback);
+    client.query('SELECT * FROM Atleta A INNER JOIN Modalidade M ON A.atl_mod = M.mod_codigo WHERE atl_codigo = '+ cod, callback);
 }
 
 model.create = (atl, callback) => {

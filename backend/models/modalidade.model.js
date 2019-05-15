@@ -3,7 +3,7 @@ const client = require('../config/conexao');
 const model = {};
 
 model.listAll = (callback) => {
-    client.query('SELECT * FROM Modalidade', callback);
+    client.query('SELECT * FROM Modalidade ORDER BY mod_nome', callback);
 }
 
 model.list = (cod, callback) => {
