@@ -9,7 +9,11 @@ import { ModalidadeService } from '../../../services/modalidade.service';
 })
 export class ModalidadeFormComponent implements OnInit {
 
-  modalidade:any = {};
+  modalidade:any = {
+    mod_nome:"",
+    mod_categoria:"",
+    mod_descricao:""
+  };
 
   constructor(
     public router: Router,
@@ -46,6 +50,7 @@ export class ModalidadeFormComponent implements OnInit {
       if(this.modalidade[key].length < 1){
         alert('Preencha todos os campos');
         check = false;
+        return false;
       }  
     }); 
 

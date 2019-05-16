@@ -2,7 +2,7 @@
 /     configurações de acesso ao banco de dados
 */
 var mysql = require('mysql');
-var database = 'dados191n';
+var database = 'dados191n2';
 
 // instanciar objeto de acesso ao banco de dados
 var client = mysql.createConnection({

@@ -2,7 +2,57 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+a{text-decoration: none; }
+a:hover{ color: rgb(255, 0, 157);}
+
+.title-toolbar{ box-shadow: 0px 1px 4px black;}
+.container-toolbar{position: sticky; top: 0; z-index: 2;}
+.container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+table{
+    margin: auto;
+}
+td{
+    padding: 10px;
+    width: 30%;
+}
 
 nav{ margin-left: 30px;}
 
 .form-container{ display: flex; flex-direction: column;}
+.button-container{margin: 0 0 0 auto;}
+.left-input{
+    width: 47.5%;
+    margin-right: 2.5%;
+}
+.rigth-input{
+    width: 47.5%;
+    margin-left: 2.5%;
+}
+
+.article{
+    margin: 20px auto 40px auto;
+
+}
+
+.article p{
+    text-indent: 50px;
+    margin: auto 5% auto auto;
+    width: 45%;
+    float: left;
+}
+
+
+.notarticle{
+    margin: 20px auto 40px auto;
+}
+.notarticle p{
+    text-indent: 50px;
+    margin: auto 5% auto auto;
+    
+}

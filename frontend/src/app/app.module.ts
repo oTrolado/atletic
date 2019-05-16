@@ -13,17 +13,26 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 
 import { ModalidadeListComponent } from './components/modalidade/modalidade-list/modalidade-list.component';
 import { ModalidadeFormComponent } from './components/modalidade/modalidade-form/modalidade-form.component';
+import { AtletaListComponent } from './components/atleta/atleta-list/atleta-list.component';
+import { AtletaFormComponent } from './components/atleta/atleta-form/atleta-form.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalidadeListComponent,
-    ModalidadeFormComponent
+    ModalidadeFormComponent,
+    AtletaListComponent,
+    AtletaFormComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
@@ -32,11 +41,15 @@ import { ModalidadeFormComponent } from './components/modalidade/modalidade-form
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatSelectModule,
     MatTableModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

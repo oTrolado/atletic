@@ -1,14 +1,13 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="title-toolbar" color="primary">
   {{title}}
 
   <nav>
-      <button mat-button>Home</button>
-      <button mat-button >Atletas</button>
+      <a mat-button routerLink="">Home</a>
+      <a mat-button routerLink="atleta">Atletas</a>
       <a mat-button routerLink="modalidade">Modalidades</a>
   </nav>
    
 </mat-toolbar>
 
-Pagina inicial do Atletic
 
 <router-outlet></router-outlet>

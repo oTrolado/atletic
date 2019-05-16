@@ -1,0 +1,36 @@
+<mat-toolbar class="container-toolbar" color="primary">
+    <h1>Atletas</h1>
+  </mat-toolbar>
+  
+  <section class="container">
+    <mat-card>
+      <h1>Tabela Atleta</h1>
+  
+      <table class="atleta-table">
+        <tr>
+          <td>
+            <a routerLink="/atleta/novo" mat-raised-button>Novo</a>
+          </td>
+        </tr>
+      
+        <tr>
+        
+            <th>Nome</th>
+            <th>Modalidade</th>
+            <th>País</th>
+        
+        </tr>
+
+        <tr *ngFor="let atleta of atletas">
+        
+            <td><a [routerLink]="['/atleta',atleta.atl_codigo]">{{ atleta.atl_nome }}</a></td>
+            <td><a [routerLink]="['/modalidade',atleta.mod_codigo]">{{ atleta.mod_nome }}</a></td>
+            <td>{{ atleta.atl_pais}}</td>
+            <td><button mat-flat-button color="warn" (click)="excluir(atleta.atl_codigo)">
+              <mat-icon>delete_forever</mat-icon>
+            </button></td>
+        
+        </tr>
+      </table>
+    </mat-card>
+  </section>
