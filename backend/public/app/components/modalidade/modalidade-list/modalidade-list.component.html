@@ -1,0 +1,33 @@
+<mat-toolbar class="container-toolbar" color="primary">
+  <h1>Modalidades</h1>
+</mat-toolbar>
+
+<section class="container">
+  <mat-card>
+    <h1>Tabela Modalidade</h1>
+
+    <table class="modalidade-table">
+      <tr>
+        <td>
+          <a routerLink="/modalidade/novo" mat-raised-button>Novo</a>
+        </td>
+      </tr>
+      <tr>
+      
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Categoria</th>
+      
+      </tr>
+      <tr *ngFor="let modalidade of modalidades">
+        <td><a [routerLink]="['/modalidade',modalidade.mod_codigo]">{{ modalidade.mod_nome }}</a></td>
+        <td>{{ modalidade.mod_descricao}}</td>
+        <td>{{ modalidade.mod_categoria}}</td>
+        <td><button mat-flat-button color="warn" (click)="excluir(modalidade.mod_codigo)">
+          <mat-icon>delete_forever</mat-icon>
+        </button></td>
+      
+      </tr>
+    </table>
+  </mat-card>
+</section>
