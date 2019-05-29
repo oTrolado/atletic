@@ -2,13 +2,14 @@
 /     configurações de acesso ao banco de dados
 */
 var mysql = require('mysql');
-var database = 'dados191n2';
+var database = 'dados191n';
 
 // instanciar objeto de acesso ao banco de dados
 var client = mysql.createConnection({
     user: 'root',
     host: 'localhost',
-    port: 3307
+//    password: 'fatec123*',
+    port: 3306
 });
 console.log('Connected !!!');
 client.query('USE ' + database);
