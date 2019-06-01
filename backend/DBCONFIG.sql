@@ -12,7 +12,7 @@ CREATE  TABLE IF NOT EXISTS `dados191n`.`Atleta` (
   `atl_mod` INT NOT NULL,
   `atl_nome` VARCHAR(30) NOT NULL,
   `atl_pais` VARCHAR(30) NOT NULL,
-  `atl_nascimento`  VARCHAR(30),
+  `atl_nascimento` DATE,
   `atl_estado` VARCHAR(30) NOT NULL,
   `atl_cidade` VARCHAR(30) NOT NULL,
   CONSTRAINT fk_atl
@@ -29,7 +29,7 @@ INSERT INTO Modalidade(mod_nome, mod_descricao, mod_categoria)
         ('Passar de semestre','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Mística');
 
 INSERT INTO Atleta(atl_mod, atl_nome, atl_pais, atl_nascimento, atl_estado, atl_cidade)
-  VALUES(1,'Neto da Silva','Brazil','20/06/1989','São Paulo', 'Franca'),
-        (4,'Neto Junqueira','Roma','20/06/1989','Belém do para', 'Atenas'),
-        (3,'Neto Dos Santos','Kretch','20/06/1989','Acre', 'Pequin'),
-        (2,'Neto Almeida','Slovackia','20/06/1989','Jothum', 'Heilm');
+  VALUES(1,'Neto da Silva','Brazil','1989-06-20','São Paulo', 'Franca'),
+        (4,'Neto Junqueira','Roma','1989-06-20','Belém do para', 'Atenas'),
+        (3,'Neto Dos Santos','Kretch','1989-06-20','Acre', 'Pequin'),
+        (2,'Neto Almeida','Slovackia','1989-06-20','Jothum', 'Heilm');

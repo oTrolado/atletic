@@ -25,7 +25,10 @@ controller.listar = (req, res) => {
 }
 
 controller.criar = (req, res) => {
+
+    req.body.atl_nascimento = new Date(req.body.atl_nascimento).toISOString().substr(0, 10);
     console.log(req.body);
+    
     Atleta.create(req.body, (erro, resp) => {
         if(erro){
             console.error(erro);
