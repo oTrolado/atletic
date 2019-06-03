@@ -8,6 +8,7 @@ controller.listarTodos = (req, res) => {
             console.error(erro);
             throw erro;
         } else {
+            resp.map( atleta => atleta.atl_nascimento = new Date(atleta.atl_nascimento).toLocaleDateString('pt-BR'));
             res.json(resp).end();
         }
     });

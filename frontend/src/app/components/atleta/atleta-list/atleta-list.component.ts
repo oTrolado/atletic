@@ -16,6 +16,7 @@ export class AtletaListComponent implements OnInit {
     this.service.listarTodos().subscribe(
       sucess => {
         this.atletas = sucess;
+        this.atletas.map(atleta => atleta.atl_nascimento = new Date(atleta.atl_nascimento).toLocaleDateString());
         console.log(this.atletas);
       },
       error => {

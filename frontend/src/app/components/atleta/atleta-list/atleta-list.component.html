@@ -18,6 +18,7 @@
             <th>Nome</th>
             <th>Modalidade</th>
             <th>País</th>
+            <th>Nascimento</th>
         
         </tr>
 
@@ -26,6 +27,7 @@
             <td><a [routerLink]="['/atleta',atleta.atl_codigo]">{{ atleta.atl_nome }}</a></td>
             <td><a [routerLink]="['/modalidade',atleta.mod_codigo]">{{ atleta.mod_nome }}</a></td>
             <td>{{ atleta.atl_pais}}</td>
+            <td>{{ atleta.atl_nascimento }}</td>
             <td><button mat-flat-button color="warn" (click)="excluir(atleta.atl_codigo)">
               <mat-icon>delete_forever</mat-icon>
             </button></td>
