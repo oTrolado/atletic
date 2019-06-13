@@ -25,6 +25,8 @@ import { AtletaFormComponent } from './components/atleta/atleta-form/atleta-form
 import { HomeComponent } from './components/home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ClubeListComponent } from './components/clube/clube-list/clube-list.component';
+import { ClubeFormComponent } from './components/clube/clube-form/clube-form.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { environment } from '../environments/environment';
     ModalidadeFormComponent,
     AtletaListComponent,
     AtletaFormComponent,
-    HomeComponent
+    HomeComponent,
+    ClubeListComponent,
+    ClubeFormComponent
   ],
   imports: [
     HttpClientModule,

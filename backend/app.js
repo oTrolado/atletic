@@ -7,6 +7,7 @@ const cors = require('cors');
 
 var modRouter = require('./routes/modalidade.router');
 var atlRouter = require('./routes/atleta.router');
+var clbRouter = require('./routes/clube.router');
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(cors());
 
 app.use('/modalidade', modRouter);
 app.use('/atleta', atlRouter);
+app.use('/clube', clbRouter);
 //app.get('/*', (req,res) => res.sendFile(path.join(__dirname)));
 
 // catch 404 and forward to error handler

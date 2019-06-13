@@ -1,0 +1,36 @@
+<mat-toolbar class="container-toolbar" color="primary">
+  <h1>Clubes</h1>
+</mat-toolbar>
+
+<section class="container">
+  <mat-card>
+    <h1>Tabela Clube</h1>
+
+    <table class="clube-table">
+      <tr>
+        <td>
+          <a routerLink="/clube/novo" mat-raised-button>Novo</a>
+        </td>
+      </tr>
+    
+      <tr>
+      
+          <th>Nome</th>
+          <th>País</th>
+          <th>Atleta Estrangeiro?</th>
+      
+      </tr>
+
+      <tr *ngFor="let clube of clubes">
+      
+          <td><a [routerLink]="['/clube',clube.clb_codigo]">{{ clube.clb_nome }}</a></td>
+          <td>{{ clube.clb_pais}}</td>
+          <td>{{ clube.clb_atletasEstrangeiros }}</td>
+          <td><button mat-flat-button color="warn" (click)="excluir(clube.clb_codigo)">
+            <mat-icon>delete_forever</mat-icon>
+          </button></td>
+      
+      </tr>
+    </table>
+  </mat-card>
+</section>

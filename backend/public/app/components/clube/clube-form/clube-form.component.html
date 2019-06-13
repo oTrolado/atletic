@@ -1,0 +1,44 @@
+<mat-toolbar class="container-toolbar" color="primary">
+  <h1>Clubes</h1>
+</mat-toolbar>
+  
+  <section class="container">
+    <mat-card>
+      <h1>Formulário Clube</h1>
+    
+      <form>
+          <div class="form-container">
+            <div>
+              <mat-form-field class="full-input">
+                  <mat-label>Nome</mat-label>
+                  <input matInput  [(ngModel)]="clube.clb_nome" name="clb_nome" required>
+                </mat-form-field>
+            </div>
+
+            <div>
+
+              <mat-form-field class="left-input">
+                <mat-label>Possui Atleta Estrangeiro?</mat-label>
+                <mat-select [(value)]="clube.clb_atletasEstrangeiros">
+                    <mat-option value="Sim">
+                      Sim
+                    </mat-option>
+                    <mat-option value="Sim">
+                      Não
+                    </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field class="rigth-input">
+                <mat-label>País</mat-label>
+                <input matInput  [(ngModel)]="clube.clb_pais" name="clb_pais" required>
+              </mat-form-field>
+            </div>
+  
+            <section class="button-container">
+              <button mat-button color="accent" (click)="cancelar()"><strong>Cancelar</strong></button>
+              <button mat-button color="primary" (click)="enviar()"><strong>Enviar</strong></button>
+            </section>
+          </div>
+      </form>
+    </mat-card>
+    </section>

@@ -18,6 +18,18 @@ CREATE  TABLE IF NOT EXISTS `dados191n`.`Atleta` (
   CONSTRAINT fk_atl
   FOREIGN KEY (`atl_mod` )
     REFERENCES `dados191n`.`Modalidade` (`mod_codigo` ));
+    
+CREATE  TABLE IF NOT EXISTS `dados191n`.`Clube` (
+  `clb_codigo` INT PRIMARY KEY AUTO_INCREMENT,
+  `clb_nome` VARCHAR(45) NOT NULL,
+  `clb_pais` VARCHAR(45) NULL,
+  `clb_atletasEstrangeiros` VARCHAR(30) NOT NULL);
+  
+INSERT INTO Clube(clb_nome, clb_pais, clb_atletasEstrangeiros)
+  VALUES('Roses of Canada','Canada','Sim'),
+        ('Macaco Velho','Brazil','Não'),
+        ('America SDF','USA','Sim'),
+        ('Shipksu Ashyiu','Japan','Não');
 
 INSERT INTO Modalidade(mod_nome, mod_descricao, mod_categoria)
   VALUES('Arremeço de dardos','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Terrestre'),
@@ -33,3 +45,4 @@ INSERT INTO Atleta(atl_mod, atl_nome, atl_pais, atl_nascimento, atl_estado, atl_
         (4,'Neto Junqueira','Roma','1989-06-20','Belém do para', 'Atenas'),
         (3,'Neto Dos Santos','Kretch','1989-06-20','Acre', 'Pequin'),
         (2,'Neto Almeida','Slovackia','1989-06-20','Jothum', 'Heilm');
+        
